@@ -3,9 +3,6 @@ session_start();
 require_once 'db_config.php';
 require_once 'auth.php';
 
-// Run the migration to create the admob_ads table if it doesn't exist
-require_once 'migrations/20240802_create_admob_ads_table.php';
-
 // Check if the user is an admin
 if (!is_admin()) {
     header('Location: login.php');
